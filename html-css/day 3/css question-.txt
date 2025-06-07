@@ -1,0 +1,10 @@
+css question:-
+
+1.preference of css by browser?
+ans -inline css
+
+2.css selector?
+ans - used to select html element for styling
+
+
+

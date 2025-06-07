@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+         
+        border: 2px solid black;
+        /* padding: 6px; */
+        }
+        tr,td{
+            padding: 6px;
+        }
+        td{
+            width: 200px;
+        }
+       
+      
+    </style>
+</head>
+<body>
+    <table>
+         <tr><th colspan="4"><h2>Registration Form</h2></th></tr>
+         <tr>
+            <td><label for="">Student Name</label></td>
+            <td><input type="text" placeholder="First Name"></td>
+            <td><input type="text" placeholder="Middle Name"></td>
+            <td><input type="text" placeholder="Last Name"></td>
+         </tr>
+         <tr>
+            <td><label for="">Father Name</label></td>
+            <td><input type="text" placeholder="Enter your father name"></td>
+            <td><label>Mother Name</label></td>
+            <td><input type="text" placeholder="Enter your mother name"></td>
+         </tr>
+           
+         <tr>
+            <td><label for="">Date of Birth</label></td>
+            <td><input type="date"></td>
+            <td><label for="">Gender</label></td>
+            <td>Male <input type="radio" name="gender"> Female <input type="radio" name="gender"></td>
+         </tr>
+
+         <tr>
+            <td><label for="">Category</label></td>
+            <td>Gen <input type="radio" name="cat">OBC <input type="radio" name="cat">SC/ST <input type="radio" name="cat"></td>
+            <td><label for="">Handicap</label></td>
+            <td>Yes <input type="radio" name="yn"> No <input type="radio" name="yn"></td>
+
+         </tr>
+
+         <tr>
+            <td><label for="">Ex-Serviceman</label></td>
+            <td>Yes <input type="radio" name="yn"> No <input type="radio" name="yn"></td>
+            <td><label for="">EWS</label></td>
+            <td>Yes <input type="radio" name="yn"> No <input type="radio" name="yn"></td>
+         </tr>
+
+         <tr>
+            <td><label for="">Email Id</label></td>
+            <td><input type="email" placeholder=""></td>
+            <td><label>Mobile No.</label></td>
+            <td><input type="tel" placeholder=""></td>
+         </tr>
+
+         <tr>
+            <td><label for="">State</label></td>
+            <td><select>
+                <option value="">Select any one</option>
+                <option value="">MP</option>
+                <option value="">UP</option>
+                <option value="">Bihar</option>
+                <option value="">Delhi</option>
+            </select></td>
+            <td><label>City</label></td>
+            <td><select>
+                <option value="">Select any one</option>
+                <option value="">ayodhya</option>
+                <option value="">patna</option>
+                <option value="">laxmi nagar</option>
+                <option value="">gurgaon</option>
+            </select></td>
+         </tr>
+
+         <tr>
+            <td><label for="">Upload Photo</label></td>
+            <td><input type="file" placeholder=""></td>
+            <td><label>Upload Signature</label></td>
+            <td><input type="file" placeholder=""></td>
+         </tr>
+
+ <tr><th colspan="4"><button>Submit</button></th></tr>
+
+
+
+    </table>
+</body>
+</html>

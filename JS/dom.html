@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child1"><h1>child 1</h1></div>
+      <div id="child2"><h1>child 2</h1></div>
+    </div>
+    <input type="text" name="fname" placeholder="fname" />
+    <input type="text" name="fname" placeholder="lname" />
+    <p class="pp">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem
+      fuga accusantium vero, unde nisi praesentium quam beatae quasi laborum.
+      Quia, ex expedita. Asperiores, hic nobis voluptatum laboriosam tempore
+      voluptatibus dolorum.
+    </p>
+    <p class="pp">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa magni
+      voluptatibus itaque, magnam impedit commodi non dolorum quasi vitae illum
+      libero facere porro adipisci dolor voluptates provident earum enim
+      inventore?
+    </p>
+
+<div id="con">
+      <p id="pp">hi</p>
+</div>
+
+ <ul id="fru">
+<li>orange</li>
+ </ul>
+
+
+    <script>
+      //   let h = document.getElementsByTagName("div")[0];
+      //   let c = document.createElement("h1");
+      //   c.innerHTML = "hello..";
+      //   h.appendChild(c);
+
+      //  console.log(c.parentNode);
+      //   console.log(h);
+      //   console.log(document.getElementsByName("fname")[0].placeholder);
+      //   console.log(document.getElementsByName("fname")[1].placeholder);
+    //     console.log(document.getElementsByTagName("input"));
+    //     console.log(document.getElementsByClassName('pp')[0].innerText);
+    //     console.log(document.querySelector('.pp'));
+      
+    //   let p = document.getElementById("parent");
+    //   let c1 = document.getElementById("child1");
+    //   let c2 = document.getElementById("child2");
+
+    //   console.log(p.firstElementChild);
+
+    //   console.log(p.firstElementChild.id);
+    //   console.log(c1.parentElement.id);
+    //   console.log("sibling of child 1: "+c1.nextElementSibling.id);
+    //   console.log("sibling of child 2: "+c2.previousElementSibling.id)
+
+    // let p=document.createElement('p');
+    // p.innerHTML="<h1>hello..</h1>";
+    
+    // let con=document.getElementById("con");
+    // con.appendChild(p);
+    // con.insertBefore(p,pp)
+
+    //  let newd=document.createElement('div');
+    //  newd.innerHTML="<h1>harsh</h1>";
+    //  con.before(newd);      
+
+    //  let copy=con.cloneNode(true);
+    //  document.body.append(copy);
+
+    // document.getElementById('con').replaceChild('pp');
+
+   // let con=document.getElementById("con");
+    // con.appendChild(p);
+    // con.insertBefore(p,pp)
+
+    let  newli=document.createElement('li');
+    newli.innerText="apple";
+let fchild=document.getElementById('fru').firstElementChild;
+
+Document.getElementById('fru').insertBefore(newli,fchild);
+
+    </script>
+  </body>
+</html>

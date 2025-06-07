@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con">
+      <img
+        id="oldimg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvHZcbSXlU1dSscL3UPaheXCEdtty_qqSOug&s"
+        alt="old thor"
+        height="200px"
+      />
+      <p id="url"></p>
+    </div>
+    <div id="con2"></div>
+    <button id="btn" onclick="showstyle()">show</button>
+
+    <button id="btncn" onclick="change()">dark</button>
+
+    <div id="parent">
+      <button id="child">click me..</button>
+    </div>
+
+    <button id="alert">alert message</button>
+
+    <button id="crth1">create red box</button>
+
+    <script>
+      //get attributes
+      let img = document.getElementById("oldimg");
+      console.log(img.getAttribute("src"));
+      let url = img.getAttribute("src");
+      document.getElementById("url").innerText = url;
+
+      //set attributes
+      let newimg = document.createElement("img");
+      newimg.setAttribute(
+        "src",
+        "https://akns-images.eonline.com/eol_images/Entire_Site/2017216/rs_634x952-170316094114-ThorRagnarok58c9d18ec0d49.jpg?fit=around%7C634:952&output-quality=90&crop=634:952;center,top"
+      );
+      newimg.setAttribute("height", "200px");
+      newimg.setAttribute("id", "newimg");
+      document.getElementById("con").append(newimg);
+
+      //has attributes
+      if (!newimg.hasAttribute("alt")) {
+        newimg.setAttribute("alt", "thor new image");
+      }
+      console.log(newimg.getAttribute("alt"));
+
+      //remove attributes
+      img.removeAttribute("alt");
+
+      //------------------------------css manipulation --------------------------
+      //1--style-attributes one bye one
+      img.style.border = "2px solid blue";
+      newimg.style.borderRadius = "20px";
+      let con = document.getElementById("con");
+      con.style.border = "2px solid black";
+      con.style.padding = "10px";
+
+      //2--style-in one using cssText
+      let con2 = document.getElementById("con2");
+      con2.style.cssText =
+        "border:1px solid black;height:100px;width:200px;margin-top:20px;";
+
+      //get computed style method
+      function showstyle() {
+        let computedstyle = window.getComputedStyle(con2);
+        document.getElementById("con2").innerHTML =
+          computedstyle.getPropertyValue("border");
+      }
+
+      //classname  method
+      con2.className = "container 2";
+      console.log(con2.className);
+
+      //add and remove class name
+      con2.classList.add("division");
+      con2.classList.remove("2");
+      console.log(con2.className);
+
+      //change background toggle
+      let btn2 = document.getElementById("btncn");
+      function change() {
+        con.classList.toggle("dark");
+      }
+
+      // bubbly event and capturing event
+      let parent = document.getElementById("parent");
+      let child = document.getElementById("child");
+
+      parent.addEventListener(
+        "click",
+        (click = () => {
+          console.log("parent clicked");
+        }),
+        true
+      );
+      //true write for calling parent first then child event capturing without false it perform bubbling event
+
+      child.addEventListener(
+        "click",
+        (click = () => {
+          console.log("child clicked");
+        })
+      );
+
+      //---------------------event listenser-----------------------
+
+      //onlcick
+      let alt = document.getElementById("alert");
+      // alt.onclick=function msg(){
+      //     alert("hello....");
+      // }
+
+      //addeventlistener
+      alt.addEventListener("click", function () {
+        alert("welcome");
+      });
+
+      //removeeventlistener
+      //     msg=()=>alert("remeove");
+      //    setTimeout(alt, alt.removeEventListener('click',msg()),5000)
+
+      let crth1 = document.getElementById("crth1");
+      crth1.addEventListener("click", function () {
+        let box = document.createElement("div");
+        box.style.cssText =
+          " background-color:red;border:2px solid black;height:100px;width:100px;margin-top:10px";
+        document.body.append(box);
+      });
+    </script>
+  </body>
+</html>
