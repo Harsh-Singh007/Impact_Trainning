@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+  </head>
+  <body>
+    <h1>local Storage</h1>
+    <input type="text" id="name" placeholder="enter name" />
+    <input type="email" id="email" placeholder=" enter email" />
+    <button id="btn">Store</button>
+    <script>
+      document.getElementById("btn").addEventListener("click",function(){
+
+         let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let obj = { name, email };
+        console.log(obj);
+        
+        let objjson=JSON.stringify(obj);
+        localStorage.setItem("user",objjson);
+       let conobj=JSON.parse(localStorage.getItem("user"));
+       console.log(conobj);
+       let p=document.createElement("p");
+        p.innerText=`${conobj.name}  ${conobj.email}`
+        document.body.appendChild(p);
+       
+      })
+    </script>
+  </body>
+</html>

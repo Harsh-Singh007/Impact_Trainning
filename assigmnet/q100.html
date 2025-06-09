@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-100</title>
+    <style>
+    #colorBox {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      margin-bottom: 10px;
+      border: 2px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <style>
+    .highlighted {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+  <style>
+    .active {
+      background-color: lightgreen;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="msg">
+        <p id="para">this is paragraph</p>
+
+        <p class="home">homehere</p>
+        <p class="research">research here</p>
+        <p class="contant">content here</p>
+        <input type="text" name="group1" style="background-color: yellow;">
+<input type="text" name="group1" style="background-color: lightblue;">
+<button onclick="clearBackgroundColorsByName('group1')">Clear Backgrounds</button>
+<div class="highlight">Element 1</div>
+  <div class="highlight">Element 2</div>
+  <div class="highlight">Element 3</div>
+  <div class="highlight">Element 4</div>
+  <div class="highlight">Element 5</div>
+
+  <button onclick="changeHighlightBackgrounds()">Change Backgrounds</button>
+
+<a href="#">Link 1</a>
+<div class="box">Box 1</div>
+  <div class="box active">Box 2 (active)</div>
+  <div class="box active">Box 3 (active)</div>
+
+  <button onclick="highlightFirstActive()">Add Border to First .active</button>
+
+   <ul>
+    <li class="completed">Task 1</li>
+    <li>Task 2</li>
+    <li class="completed">Task 3</li>
+    <li>Task 4</li>
+    <li class="completed">Task 5</li>
+  </ul>
+
+  <button onclick="resizeCompletedItems()">Resize Completed Items</button>
+  
+  <div>
+    <p>This is inside a div</p>
+    <button onclick="changeParentBackground(this)">Click Me</button>
+  </div>
+    </div>
+     <div id="parent">
+    <div>
+      <p>First Child Content</p>
+    </div>
+    <div>
+      <p>Second Child Content</p>
+    </div>
+  </div>
+
+  <button onclick="addChildToFirst()">Add New Child</button>
+   <div>Item 1</div>
+  <div>Item 2</div>
+  <div id="target">Item 3 (Target)</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+
+  <button onclick="logSiblings()">Log Siblings of Item 3</button>
+   <div id="container">
+    <div>Item 1</div>
+    <div id="target">Item 2 (Target)</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+  </div>
+
+  <button onclick="addToAllSiblings()">Add Element to Parent of Each Sibling</button>
+  <h2>Page Content</h2>
+
+  <div class="container">
+    <p>This is the container element.</p>
+  </div>
+
+  <button onclick="insertDiv()">Insert New Div Before .container</button>
+<button onclick="createList()">Create List</button>
+
+  <div id="container" style="border:1px solid #ccc; padding:10px; width:300px;">
+    <!-- Content will be replaced here -->
+  </div>
+
+  <button onclick="setContent()">Set Content</button>
+  <p id="dateParagraph"></p>
+
+  <button onclick="showCurrentDate()">Show Current Date</button>
+    <h1 id="mainHeading">This is the Heading</h1>
+
+  <button onclick="addParagraphAfter()">Add Paragraph After H1</button>
+    <div id="container" style="border: 1px solid #ccc; padding: 10px;">
+    This is some content inside the container.
+  </div>
+
+  <button onclick="prependImportant()">Prepend Important</button>
+  <h2>Some content above the footer</h2>
+  </div>
+
+  <footer style="background: #ddd; padding: 10px; margin-top: 20px;">
+    This is the footer.
+  </footer>
+
+  <button onclick="insertSection()">Insert Section Before Footer</button>
+  <div id="imageContainer" style="border: 1px solid #ccc; padding: 10px; width: 300px;">
+    <img id="oldImage" src="https://via.placeholder.com/150?text=Old+Image" alt="Old Image" />
+  </div>
+
+  <button onclick="replaceImage()">Replace Image</button>
+<article id="originalArticle" style="border: 1px solid #333; padding: 10px; margin-bottom: 10px;">
+    <h2>Original Article</h2>
+    <p>This is some content inside the original article.</p>
+  </article>
+
+  <div id="targetContainer" style="border: 1px dashed #666; padding: 10px;">
+    <h3>Target Container</h3>
+  </div>
+
+  <button onclick="cloneArticle()">Clone Article</button>
+<div id="parentDiv" style="border: 1px solid #444; padding: 10px; width: 300px;">
+    <p id="childPara">This is the child paragraph to be removed.</p>
+    <p>Another paragraph that stays.</p>
+  </div>
+
+  <button onclick="removeChildElement()">Remove Child Paragraph</button>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3 (Last Item)</li>
+  </ul>
+
+  <button onclick="insertBeforeLast()">Insert Before Last Item</button>
+ <div class="gallery">
+    <img src="image1.jpg" alt="Image 1" />
+    <img src="image2.png" alt="Image 2" />
+    <img src="image3.gif" alt="Image 3" />
+  </div>
+
+  <button onclick="logImageSrcs()">Log Image Sources</button>
+
+  <a id="myLink" href="https://example.com" target="_blank">Go to Example.com</a>
+<div class="item" data-id="123">Item with data-id</div>
+  <div class="item">Item without data-id</div>
+
+  <button onclick="checkDataId()">Check data-id Attribute</button>
+   <form id="myForm">
+    <button type="button" disabled>Button 1 (disabled)</button>
+    <button type="button" disabled>Button 2 (disabled)</button>
+    <button type="reset" id="resetBtn">Reset Form (Enable Buttons)</button>
+  </form>
+   <div id="colorBox">Color Box</div>
+  <button onclick="changeBackgroundColor()">Change Color</button>
+    <div id="myElement">This text will change style</div>
+  <button onclick="changeStyles()">Change Styles</button>
+ <div id="box">Resize me!</div>
+  <button onclick="logSize()">Log Size</button>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <button onclick="toggleHighlight()">Toggle Highlight</button>
+  <div id="myElement">Watch me activate!</div>
+  <button onclick="activateElement()">Activate</button>
+
+
+
+
+
+
+
+
+    
+    <script>
+        //1
+        let newPara=document.createElement("p");
+        newPara.innerHTML="hy how are you";
+        document.getElementById("msg").appendChild(newPara);
+        //2
+        function clearBackgroundColorsByName(name) {
+  const elements = document.getElementsByName(name);
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.backgroundColor = '';
+  }
+}
+//3
+const links = document.getElementsByTagName('a');
+  links[0].href = 'https://new-url.com';
+
+  //4
+  function changeHighlightBackgrounds() {
+      const elements = document.getElementsByClassName("highlight");
+
+      for (let i = 0; i < elements.length; i++) {
+        const hue = (i * 360) / elements.length; // Color variation
+        elements[i].style.backgroundColor = hsl(${hue}, 70%, 80%);
+      }
+    }
+//5
+function highlightFirstActive() {
+      const firstActive = document.querySelector(".active");
+      if (firstActive) {
+        firstActive.style.border = "2px solid blue";
+        firstActive.style.padding = "10px";
+        firstActive.style.margin = "10px";
+      }
+    }
+
+    //6
+    function resizeCompletedItems() {
+      const completedItems = document.querySelectorAll("li.completed");
+
+      completedItems.forEach(function(item) {
+        item.style.fontSize = "18px";
+      });
+    }
+
+    //7
+     function changeParentBackground(buttonElement) {
+      const parentDiv = buttonElement.parentElement; 
+      if (parentDiv && parentDiv.tagName === "DIV") {
+        parentDiv.style.backgroundColor = "blue";
+      }
+    }
+    //8
+    function addChildToFirst() {
+      const parent = document.getElementById("parent");
+      const firstChild = parent.firstElementChild;
+
+      if (firstChild) {
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = "New Child Added";
+        firstChild.appendChild(newParagraph);
+      }
+    }
+    //9
+     function logSiblings() {
+      const target = document.getElementById("target");
+
+      const prevSibling = target.previousElementSibling;
+      const nextSibling = target.nextElementSibling;
+
+      console.log("Previous Sibling:", prevSibling ? prevSibling.textContent : "None");
+      console.log("Next Sibling:", nextSibling ? nextSibling.textContent : "None");
+    }
+    //10
+    function addToAllSiblings() {
+      const target = document.getElementById("target");
+      const parent = target.parentNode;
+      const children = parent.children;
+
+      for (let i = 0; i < children.length; i++) {
+        if (children[i] !== target) {
+          const newPara = document.createElement("p");
+          newPara.textContent = "New element added for sibling";
+          parent.appendChild(newPara)
+        }
+      }
+    }
+    //11
+     function insertDiv() {
+      const newDiv = document.createElement("div");
+      newDiv.textContent = "This is a new div inserted before .container";
+      newDiv.style.backgroundColor = "lightgreen";
+      newDiv.style.padding = "10px";
+      newDiv.style.marginBottom = "10px";
+
+      const container = document.querySelector(".container");
+      container.parentNode.insertBefore(newDiv, container);
+    }
+    //12
+    function createList() {
+      const ul = document.createElement("ul"); 
+
+      
+      for (let i = 1; i <= 5; i++) {
+        const li = document.createElement("li");
+        li.textContent = "List Item " + i;
+        ul.appendChild(li);
+      }
+
+      document.body.appendChild(ul); 
+    }
+    //13
+function setContent() {
+      const container = document.getElementById("container");
+      container.innerHTML = `
+        <div style="background-color: lightblue; padding: 10px; margin-bottom: 5px;">
+          This is a dynamically added DIV.
+        </div>
+        <span style="color: red; font-weight: bold;">
+          This is a dynamically added SPAN.
+        </span>
+      `;
+    }
+    //14
+     function showCurrentDate() {
+      const p = document.getElementById("dateParagraph");
+      const today = new Date();
+
+      
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0'); 
+      const day = String(today.getDate()).padStart(2, '0');
+
+      const formattedDate = ${year}-${month}-${day};
+
+      p.textContent = formattedDate;
+    }
+//15
+function addParagraphAfter() {
+      const h1 = document.getElementById("mainHeading");
+      const newP = document.createElement("p");
+      newP.textContent = "Added After H1";
+
+      h1.after(newP);
+    }
+    //16
+     function prependImportant() {
+      const container = document.getElementById("container");
+      const strongElem = document.createElement("strong");
+      strongElem.textContent = "Important ";
+
+      container.prepend(strongElem);
+    }
+    //17
+    function insertSection() {
+      const footer = document.querySelector("footer");
+      footer.insertAdjacentHTML('beforebegin', `
+        <section style="background-color: lightyellow; padding: 15px; border: 1px solid #ccc; margin-bottom: 10px;">
+          <h3>New Section</h3>
+          <p>This section was inserted before the footer using insertAdjacentHTML().</p>
+        </section>
+      `);
+    }
+    //18
+ function replaceImage() {
+      const container = document.getElementById("imageContainer");
+      const oldImg = document.getElementById("oldImage");
+
+      const newImg = document.createElement("img");
+      newImg.src = "https://via.placeholder.com/150?text=New+Image";
+      newImg.alt = "New Image";
+
+      container.replaceChild(newImg, oldImg);
+    }
+    //19
+     function cloneArticle() {
+      const original = document.getElementById("originalArticle");
+      const clone = original.cloneNode(true); 
+      
+      const target = document.getElementById("targetContainer");
+      target.appendChild(clone);
+    }
+    //20
+     function removeChildElement() {
+      const parent = document.getElementById("parentDiv");
+      const child = document.getElementById("childPara");
+
+      if (child) {
+        parent.removeChild(child);
+      } else {
+        alert("Child element already removed!");
+      }
+    }
+//21
+function insertBeforeLast() {
+      const ul = document.getElementById("myList");
+      const lastItem = ul.lastElementChild;
+
+      const newItem = document.createElement("li");
+      newItem.textContent = "New Item Before Last";
+
+      ul.insertBefore(newItem, lastItem);
+    }
+    //22
+     function logImageSrcs() {
+      const images = document.querySelectorAll(".gallery img");
+
+      images.forEach((img, index) => {
+        const src = img.getAttribute("src");
+        console.log(Image ${index + 1} src: ${src});
+      });
+    }
+    //23
+     const link = document.getElementById("myLink");
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      
+      this.setAttribute("href", "https://openai.com");
+
+      alert("Link URL updated to OpenAI!");
+
+      
+      window.location.href = this.getAttribute("href");
+    });
+//24
+function checkDataId() {
+      // Select the first element with class 'item'
+      const element = document.querySelector(".item");
+
+      if (element.hasAttribute("data-id")) {
+        alert("The element has the data-id attribute.");
+      } else {
+        alert("The element does NOT have the data-id attribute.");
+      }
+    }
+    //25
+    document.getElementById("resetBtn").addEventListener("click", function() {
+      const form = document.getElementById("myForm");
+      const buttons = form.querySelectorAll("button");
+
+      buttons.forEach(button => {
+        if (button.hasAttribute("disabled")) {
+          button.removeAttribute("disabled");
+        }
+      });
+    });
+    //26
+     function getRandomColor() {
+      
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function changeBackgroundColor() {
+      const box = document.getElementById('colorBox');
+      const randomColor = getRandomColor();
+      box.style.backgroundColor = randomColor;
+      box.textContent = randomColor; 
+    }
+    //27
+ function changeStyles() {
+      const element = document.getElementById("myElement");
+      element.style.cssText = "font-size: 24px; color: white; background-color: teal; padding: 10px; border-radius: 5px;";
+    }
+//28
+function logSize() {
+      const element = document.getElementById('box');
+      const styles = window.getComputedStyle(element);
+
+      const width = styles.width;
+      const height = styles.height;
+
+      console.log(Computed width: ${width});
+      console.log(Computed height: ${height});
+    }
+    //29
+     function toggleHighlight() {
+      const paragraphs = document.querySelectorAll('p');
+
+      paragraphs.forEach(p => {
+       
+        if (p.className.includes('highlighted')) {
+          
+          p.className = p.className.replace('highlighted', '').trim();
+        } else {
+          
+          p.className += (p.className ? ' ' : '') + 'highlighted';
+        }
+      });
+    }
+    //30
+     function activateElement() {
+      const elem = document.getElementById('myElement');
+      elem.classList.add('active');
+
+      setTimeout(() => {
+        elem.classList.remove('active');
+      }, 2000); 
+    }
+    //31
+
+        
+    </script>
+</body>
+</html>
