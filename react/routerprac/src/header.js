@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { AiTwotoneShopping } from "react-icons/ai";
+import { MdFoodBank } from "react-icons/md";
 
 const header = () => {
   return (
@@ -13,7 +13,7 @@ const header = () => {
             className="hover:text-yellow-400 transition-colors duration-200"
           >
              <div className="text-2xl text-white font-bold">
-        <AiTwotoneShopping className='text-2xl text-yellow-400 inline mr-2' />Zomato Mall
+        <MdFoodBank className='text-3xl text-yellow-400 inline mr-1' />Bhukhe
       </div>
           </Link>
       <ul className="flex space-x-6 text-white font-medium mr-3">
@@ -34,6 +34,22 @@ const header = () => {
             Add Seller
           </Link>
         </li>
+          <li>
+          <Link
+            to="/customer"
+            className="hover:text-yellow-400 transition-colors duration-200"
+          >
+            Customer
+          </Link>
+        </li>
+         <li>
+          <Link
+            to="/stateprac"
+            className="hover:text-yellow-400 transition-colors duration-200"
+          >
+            State Practice
+          </Link>
+        </li>
         <li>
           <Link
             to="/loginsign"
@@ -42,6 +58,7 @@ const header = () => {
             Login / SignUp
           </Link>
         </li>
+        
       </ul>
     </nav>   
     
