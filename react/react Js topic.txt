@@ -1,0 +1,5 @@
+react JS
+1.component
+2.props
+3.useState
+5.useEffect

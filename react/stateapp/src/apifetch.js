@@ -4,11 +4,19 @@ import Header from './header';
 const Apifetch = () => {
   const [apidata, setApiData] = useState([]);
 
-  const fetchData = () => {
-      fetch("https://api.artic.edu/api/v1/artworks?page=2&limit=100")
-      .then((res) => res.json())
-      .then((data) => setApiData(data.data));
-  };
+ 
+      // fetch("https://api.artic.edu/api/v1/artworks?page=2&limit=100")
+      // .then((res) => res.json())
+      // .then((data) => setApiData(data.data));
+
+      async function fetchData() {
+        let res= await fetch('https://api.artic.edu/api/v1/artworks?page=2&limit=100');
+        let data=await res.json();
+        setApiData(data.data);
+
+        
+      }
+ 
 
   return (
     <>

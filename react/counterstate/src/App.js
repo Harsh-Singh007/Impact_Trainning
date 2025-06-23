@@ -4,6 +4,7 @@ import Tweet from './tweet';
 import Apifetch from './apifetch';
 import Emojji from './emojji';
 import Useeefect from './useeefect';
+import Prac from './prac';
 function App() {
   return (
     <>
@@ -11,7 +12,8 @@ function App() {
     <Tweet/>
     <Apifetch/>
     <Emojji/> */}
-    <Useeefect/>
+    {/* <Useeefect/> */}
+    <Prac/>
     </>
   );
 }
